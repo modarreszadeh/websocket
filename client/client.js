@@ -15,7 +15,6 @@ socket.onclose = function () {
 }
 
 socket.onmessage = function (e) {
-    console.log(navigator);
     output.innerHTML += "[" + navigator.platform + "]: " + e.data + "\n";
 };
 
