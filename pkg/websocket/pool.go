@@ -25,7 +25,7 @@ func (pool *Pool) Start() {
 			fmt.Println("Sending message to all clients in Pool")
 
 			for client := range pool.Clients {
-				if err := client.Conn.WriteJSON(message.Body + client.ID); err != nil {
+				if err := client.Conn.WriteJSON(message.Body); err != nil {
 					fmt.Println(err)
 					return
 				}
