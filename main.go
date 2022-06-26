@@ -33,7 +33,7 @@ func configRoutes() {
 
 	go pool.Start()
 
-	http.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/websocket", func(w http.ResponseWriter, r *http.Request) {
 		serveWebsocket(&pool, w, r)
 	})
 }

@@ -2,7 +2,7 @@
 var input = document.getElementById("input");
 var output = document.getElementById("output");
 
-var socket = new WebSocket("ws://127.0.0.1:8080/ws");
+var socket = new WebSocket("ws://127.0.0.1:8080/websocket");
 
 socket.onopen = function () {
     output.innerHTML = "";
