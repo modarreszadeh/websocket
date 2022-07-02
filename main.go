@@ -41,5 +41,6 @@ func configRoutes() {
 func main() {
 	fmt.Println("Distributed App")
 	configRoutes()
-	http.ListenAndServe(":8080", nil)
+	println("Websocket server is running on port 8080")
+	_ = http.ListenAndServe(":8080", nil)
 }
